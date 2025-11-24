@@ -261,6 +261,10 @@ def save_booking():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
+@app.route("/")
+def home():
+    return app.send_static_file("AutousateMilanoRent.html")
+
 @app.route('/api/vehicles', methods=['GET'])
 def get_vehicles():
     """Endpoint per ottenere la lista dei veicoli disponibili"""
