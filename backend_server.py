@@ -293,10 +293,6 @@ def get_vehicles():
     
     return jsonify({"vehicles": vehicles})
 
-if __name__ == '__main__':
-    # Inizializza il database
-    init_db()
-    
-    # Configurazione per Railway
-    port = int(os.environ.get('PORT', 5000))
-    app.run(debug=False, host='0.0.0.0', port=port)
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
